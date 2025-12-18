@@ -6,11 +6,11 @@ let d = new Date();
 
 console.log(d);
 
-document.getElementById("saluto").innerHTML=d.getDay();
+document.getElementById("saluto").innerHTML=d.getDate
+
+let colori=[];
 
 
-let colori:any[];
-let colori2:any<[]
 function elabora() {
 
     let numero = document.getElementById("inNumber").value;
@@ -21,9 +21,16 @@ function elabora() {
 
     if (numero >=0 && numero <= 255){
 
-
+    colori.push(numero);
 
         document.getElementById("outText").innerHTML = "hai inserito il numero" + numero;
+        document.getElementById("outText").innerHTML +=
+        "<br>" I colori inseriti sono: +colori;
+        console,log(colori);
+        if (colori.lenght == 3){
+            newColor=string = 'rgb={(${colori[0]${colori[1]}},${colori[2]})';
+
+        }
 
     } else{
 
@@ -52,5 +59,4 @@ function reset(){
 
 
 }
-
 
