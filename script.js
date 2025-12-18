@@ -9,7 +9,8 @@ console.log(d);
 document.getElementById("saluto").innerHTML=d.getDay();
 
 
-
+let colori:any[];
+let colori2:any<[]
 function elabora() {
 
     let numero = document.getElementById("inNumber").value;
@@ -51,4 +52,5 @@ function reset(){
 
 
 }
+
 
