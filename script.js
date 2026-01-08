@@ -1,45 +1,43 @@
 console.log("Inizio esecuzione");
-
 let d = new Date();
-
-
-
 console.log(d);
 
-document.getElementById("saluto").innerHTML=d.getDate
+document.getElementById("saluto").innerHTML = d.getDate();
 
-let colori=[];
+let colori = [];
 
-
-function elabora() {
-
+function elabora(){
     let numero = document.getElementById("inNumber").value;
-
     alert(numero);
 
+    if(numero >= 0 && numero <= 255){
+        // iserirre il numero dentro l'array
 
+        colori.push(numero);
+        // visuallizzare il numero dentro il div output
 
-    if (numero >=0 && numero <= 255){
+        document.getElementById("outText").innerHTML =
 
-    colori.push(numero);
+            "Hai inserito il numero " + numero;
+        // visuallizzare i numeri inseriti
 
-        document.getElementById("outText").innerHTML = "hai inserito il numero" + numero;
         document.getElementById("outText").innerHTML +=
-        "<br>" I colori inseriti sono: +colori;
-        console,log(colori);
-        if (colori.lenght == 3){
-            newColor=string = 'rgb={(${colori[0]${colori[1]}},${colori[2]})';
 
-        }
+            "<br> I colori inseriti sono:" + colori;
 
-    } else{
+            console.log(colori);
 
-        //messaggio errore div error
+            if(colori.length == 3){
 
-        document.getElementById("error").innerHTML = "il numero non è corretto"
+                newColor = `rgb(${colori[0]}, ${colori[1]}, ${colori[2]})`;
 
-        //comportamento
+                document.getElementById("outText").style.color += newColor;
+            }
 
+    }else {
+
+        // messaggio dentro il div error
+        document.getElementById("error").innerHTML = "Il numero inserito non va bene"
     }
 
 
@@ -50,13 +48,28 @@ function elabora() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function reset(){
 
-    document.getElementById("inNumber").value = "";
 
-    document.getElementById("outText").innerHTML= "Output"; //faccio il reset
-
-
-
-}
+    document.getElementById("error").innerHTML = "";
 
